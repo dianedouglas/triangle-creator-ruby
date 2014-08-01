@@ -13,6 +13,21 @@ def main_menu
       side3 = gets.chomp.to_i
       triangle = Triangle.new(side1, side2, side3)
       puts triangle.compute_type
+      puts "Would you like to change your triangle? y/n"
+      change_t = gets.chomp
+        if change_t == "y"
+          puts "Please enter a new side one:"
+          side1 = gets.chomp.to_i
+          puts "Please enter a new side two:"
+          side2 = gets.chomp.to_i
+          puts "Please enter a new side three:"
+          side3 = gets.chomp.to_i
+          triangle.set_sides(side1, side2, side3)
+          puts triangle.compute_type
+        else
+          puts "Then go away, you're done."
+          exit
+        end
     else
       puts "Then what do you need me for...quitting"
       exit
