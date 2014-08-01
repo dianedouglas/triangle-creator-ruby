@@ -19,5 +19,9 @@ class Triangle
     @side2 = side2
     @side3 = side3
   end
-
+  def compute_type
+    if @side1 + @side2 > @side3 && @side3 + @side2 > @side1 && @side1 + @side3 > @side2
+    else "This is not a triangle, try again!"
+    end
+  end
 end

@@ -12,8 +12,9 @@ describe Triangle do
     test_triangle.side2.should eq 5
     test_triangle.side3.should eq 2
   end
-  # it "returns a string to tell the user what kind of triangle they have" do
-  #   test_triangle = Triangle.new(1, 1, 8)
-  #   test_triangle.compute_type.should eq "This is not a triangle, try again!"
-  # end
+  it "returns a string to tell the user if their triangle is not a triangle" do
+    test_triangle = Triangle.new(1, 1, 8)
+    test_triangle.compute_type.should eq "This is not a triangle, try again!"
+  end
+  # it "returns isosceles "
 end
